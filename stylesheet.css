@@ -1,0 +1,207 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family:playfair display;
+	box-sizing: border-box;
+	outline: none;
+
+}
+.wrapper{
+	width: 100%;
+	height: 100vh;
+	padding-left: 4%;
+	padding-right: 0;
+	box-sizing: border-box;
+}
+.navbar{
+	height: 12%;
+	width: 90%;
+	display: flex;
+	align-items: center;
+}
+
+.logo{
+	width: 200px;
+	cursor: pointer;
+	animation: movedown 1s linear 1;
+	animation-delay: 1s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+
+@keyframes movedown{
+	0%{
+		transform: translateY(-100px);
+		visibility: visible;
+	}
+	100%{
+		transform: translateY(0);
+		visibility: visible;
+	}
+
+}
+
+
+nav{
+	flex: 1;
+	text-align: right;
+	padding-right: 4%;
+	animation: movedown 1s linear 1;
+	animation-delay: 2s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin-left: 60px;
+	position: relative;
+}
+nav ul li::after{
+	content: '';
+	height: 3px;
+	width: 0;
+	background: #000;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+}
+nav ul li:hover::after{
+	width: 100%;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 17px;
+}
+.side-menu{
+	height: 100%;
+	width: 7%;
+	top: 0;
+	right: 0;
+	background-color: #000;
+	position: fixed;
+	z-index: 2;
+}
+.facebook-icon{
+	width: 25px;
+	margin: 50px; 
+	justify-content: center;
+	cursor: pointer;
+	position: absolute;
+	bottom: 300px;
+	animation: moveup 1s linear 1;
+	animation-delay: 5s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+.instagram-icon{
+	width: 25px;
+	margin: 50px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 200px;
+	animation: moveup 1s linear 1;
+	animation-delay: 5s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+
+}
+.whatsapp-icon{
+	width: 25px;
+	margin: 50px;
+	cursor: pointer;
+	position: absolute;
+	bottom: 100px;
+	animation: moveup 1s linear 1;
+	animation-delay: 5s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+
+@keyframes moveup{
+	0%{
+		transform: translateY(100px);
+		visibility: visible;
+	}
+	100%{
+		transform: translateY(0);
+		visibility: visible;
+	}
+
+}
+.home{
+	display: flex;
+	justify-content: center;
+}
+.hero-image{
+	width: 50%;
+	animation: zoomin 1s linear 1;
+	animation-delay: 5s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+
+@keyframes zoomin{
+	0%{
+		transform: scale(0.5);
+		visibility: visible;
+	}
+	100%{
+		transform: scale(1);
+		visibility: visible;
+	}
+}
+
+
+.content h1{
+	font-size: 60px;
+	font-weight: 100;
+	margin-top: 24px;
+	margin-bottom: 15px;
+}
+.content p{
+	font-size: 16px;
+}
+.content{
+	margin-left: 3%;
+	margin-top: 10%;
+	animation: moveright 1s linear 1;
+	animation-delay: 4s;
+	visibility: hidden;
+	animation-fill-mode: forwards;
+}
+@keyframes moveright{
+	0%{
+		transform: translateX(-100px);
+		visibility: visible;
+	}
+	100%{
+		transform: translateX(0);
+		visibility: visible;
+	}
+
+}
+.link{
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+	margin: 20px 0;
+	position: relative;
+	text-transform: uppercase;
+}
+.link::after{
+	content: '';
+	background: #000;
+	height: 2px;
+	width: 60px;
+	position: absolute;
+	top: 50%;
+	left: 110%;
+	transform: translateY(-50%);
+}
+.link:hover::after{
+	width: 100px;
+	transition: 0.5s;
+}

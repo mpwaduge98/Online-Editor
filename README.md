@@ -1,2 +1,2 @@
 # Online-Editor
-A random practice project
+A practice landing page for online editorial business
